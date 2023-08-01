@@ -1,0 +1,59 @@
+// src/components/Sponsorship.scss
+
+.sponsorship {
+    // Define styles for the component container
+    // For example:
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+
+    h1{
+        font-size: 48px;
+        color: #333;
+    }
+
+    h2 {
+        // Define styles for the heading
+        // For example:
+        font-size: 24px;
+        color: #333;
+    }
+
+
+    p {
+        // Define styles for paragraphs
+        // For example:
+        color: #666;
+    }
+
+    input,
+    select {
+        // Define styles for inputs and select elements
+        // For example:
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    label {
+        // Define styles for labels
+        // For example:
+        margin-left: 5px;
+    }
+
+    button {
+        // Define styles for the button
+        // For example:
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+}

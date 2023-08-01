@@ -3,8 +3,10 @@ import { useSelector } from 'react-redux';
 import CheckoutStatus from '../../components/checkout-status';
 import CheckoutItems from '../../components/checkout/items';
 import { RootState } from 'store';
+import { useRouter } from 'next/router';
 
 const CheckoutPage = () => {
+  const router = useRouter();
 
   const priceTotal = useSelector((state: RootState) => {
     const cartItems = state.cart.cartItems;
@@ -15,6 +17,10 @@ const CheckoutPage = () => {
 
     return totalPrice;
   })
+
+  const handlePayment = ()=>{
+    router.push(`/cart/payment?data=${priceTotal}`);
+  }
 
   return (
     <Layout>
@@ -148,7 +154,7 @@ const CheckoutPage = () => {
             <a href="/cart" className="cart__btn-back"><i className="icon-left"></i> Back</a>
             <div className="cart-actions__items-wrapper">
               <button type="button" className="btn btn--rounded btn--border">Continue shopping</button>
-              <button type="button" className="btn btn--rounded btn--yellow">Proceed to payment</button>
+              <button type="button" onClick={handlePayment} className="btn btn--rounded btn--yellow">Proceed to payment</button>
             </div>
           </div>
         </div>

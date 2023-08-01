@@ -10,6 +10,8 @@ import 'swiper/swiper.scss';
 import 'rc-slider/assets/index.css';
 import 'react-rater/lib/react-rater.css';
 import '../assets/css/styles.scss';
+import "./cart/Payment.scss";
+import "./sponsorship/index.scss"
 
 import * as gtag from './../utils/gtag';
 
